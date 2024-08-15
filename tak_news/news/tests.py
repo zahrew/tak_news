@@ -1,3 +1,13 @@
+import os
+import django
+from django.conf import settings
+
+# Set the DJANGO_SETTINGS_MODULE environment variable
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'tak_news.settings')
+
+# Initialize Django
+django.setup()
+
 from django.test import TestCase
 from .models import News, Tag
 from rest_framework.test import APIClient
@@ -22,3 +32,4 @@ class NewsAPITestCase(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertEqual(len(response.data), 1)
         self.assertEqual(response.data[0]['title'], "Tech News")
+

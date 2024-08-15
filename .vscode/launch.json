@@ -1,0 +1,19 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Django Test",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/tak_news/manage.py",
+            "args": [
+                "test"
+            ],
+            "django": true,
+            "env": {
+                "DJANGO_SETTINGS_MODULE": "tak_news.settings"
+            },
+            "console": "integratedTerminal"
+        }
+    ]
+}
